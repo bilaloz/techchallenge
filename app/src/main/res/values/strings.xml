@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TechChallenge</string>
+    <string name="user_name">User Name</string>
+    <string name="user_password">User Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login">Login</string>
 </resources>
