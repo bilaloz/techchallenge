@@ -1,6 +1,5 @@
 package com.tech.challenge.fragment;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,19 +10,16 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.tech.challenge.HomeActivityContract;
+import com.tech.challenge.contract.HomeActivityContract;
 import com.tech.challenge.R;
 import com.tech.challenge.adapter.CustomAdapter;
 import com.tech.challenge.model.Response;
 import com.tech.challenge.presenter.HomeFragmentPresenter;
-import com.tech.challenge.utility.AppSettings;
-import com.tech.challenge.utility.Constants;
 import com.tech.challenge.utility.Utils;
 
 import java.util.ArrayList;

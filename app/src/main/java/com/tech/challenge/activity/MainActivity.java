@@ -10,7 +10,7 @@ import android.view.KeyEvent;
 
 import com.tech.challenge.listeners.FragmentDelete;
 import com.tech.challenge.listeners.FragmentSwitch;
-import com.tech.challenge.MainActivityContract;
+import com.tech.challenge.contract.MainActivityContract;
 import com.tech.challenge.R;
 import com.tech.challenge.helper.ListenerHelper;
 import com.tech.challenge.presenter.MainActivityPresenter;

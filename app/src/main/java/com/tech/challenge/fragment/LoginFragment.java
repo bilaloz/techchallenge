@@ -12,7 +12,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.SwitchCompat;
 
-import com.tech.challenge.LoginFragmentContract;
+import com.tech.challenge.contract.LoginFragmentContract;
 import com.tech.challenge.R;
 import com.tech.challenge.helper.ListenerHelper;
 import com.tech.challenge.presenter.LoginFragmentPresenter;

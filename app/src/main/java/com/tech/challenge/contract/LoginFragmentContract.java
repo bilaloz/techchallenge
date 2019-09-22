@@ -1,4 +1,4 @@
-package com.tech.challenge;
+package com.tech.challenge.contract;
 
 import android.content.Context;
 import android.text.Editable;

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.TextUtils;
 
-import com.tech.challenge.LoginFragmentContract;
+import com.tech.challenge.contract.LoginFragmentContract;
 import com.tech.challenge.utility.Utils;
 
 

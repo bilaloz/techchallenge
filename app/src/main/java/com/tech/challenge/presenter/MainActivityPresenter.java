@@ -3,7 +3,7 @@ package com.tech.challenge.presenter;
 
 import android.content.Context;
 
-import com.tech.challenge.MainActivityContract;
+import com.tech.challenge.contract.MainActivityContract;
 import com.tech.challenge.fragment.HomeFragment;
 import com.tech.challenge.fragment.LoginFragment;
 import com.tech.challenge.utility.Constants;

@@ -13,6 +13,7 @@ import com.tech.challenge.R;
 
 /**
  * Responsible to manage Utils
+ *
  * @author bilal
  * @version 1.0.0
  */
@@ -76,7 +77,7 @@ public class Utils {
         return userName.equals(inputName) && userPass.equals(inputPass);
     }
 
-    public static void showExitAlert(Activity activity,Context context) {
+    public static void showExitAlert(Activity activity, Context context) {
 
         if (activity == null) return;
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -90,6 +91,5 @@ public class Utils {
         AlertDialog alert = builder.create();
         alert.show();
     }
-
 
 }

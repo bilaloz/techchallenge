@@ -1,6 +1,6 @@
 package com.tech.challenge.presenter;
 
-import com.tech.challenge.HomeActivityContract;
+import com.tech.challenge.contract.HomeActivityContract;
 
 /**
  * Responsible to manage ManinActivity

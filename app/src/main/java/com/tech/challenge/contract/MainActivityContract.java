@@ -1,4 +1,4 @@
-package com.tech.challenge;
+package com.tech.challenge.contract;
 
 import androidx.fragment.app.Fragment;
 
