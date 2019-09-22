@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_graniets"
+    android:paddingStart="@dimen/sc_login_left"
+    android:paddingTop="@dimen/sc_login_top"
+    android:paddingEnd="@dimen/sc_login_right"
+    android:paddingBottom="@dimen/sc_login_bottom"
+    tools:context=".activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/edt_margin_left"
+                android:layout_marginTop="@dimen/edt_margin_top"
+                android:layout_marginEnd="@dimen/edt_margin_right"
+                android:background="@drawable/login_edt_background"
+                android:drawableStart="@drawable/login_ic_account_circle_white_24dp"
+                android:drawablePadding="@dimen/edt_padding"
+                android:hint="@string/user_name"
+                android:inputType="text"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/edt_margin_left"
+                android:layout_marginTop="@dimen/edt_margin_top"
+                android:layout_marginEnd="@dimen/edt_margin_right"
+                android:background="@drawable/login_edt_background"
+                android:drawableStart="@drawable/login_ic_security_white_24dp"
+                android:drawablePadding="@dimen/edt_padding"
+                android:hint="@string/user_password"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:padding="@dimen/edt_padding"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtUserName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sw_margin"
+                android:checked="false"
+                android:layoutDirection="ltr"
+                android:padding="@dimen/sw_padding"
+                android:paddingLeft="@dimen/sw_padding"
+                android:paddingTop="@dimen/sw_padding"
+                android:paddingEnd="@dimen/sw_padding"
+                android:paddingRight="@dimen/sw_padding"
+                android:text="@string/remember_me"
+                android:textColor="@color/white"
+                android:thumbTextPadding="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+                app:layout_constraintVertical_bias="0.0"
+                app:switchPadding="@dimen/sw_padding" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bt_margin_start"
+                android:layout_marginTop="@dimen/bt_margin_top"
+                android:layout_marginEnd="@dimen/bt_margin_end"
+                android:layout_marginBottom="@dimen/bt_margin_bottom"
+                android:background="@drawable/login_btn_background"
+                android:text="@string/login"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchRemember"
+                app:layout_constraintVertical_bias="0.20" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="@dimen/iw_margin"
+                android:background="@drawable/login_app_icon"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/iw_padding"
+                app:layout_constraintBottom_toTopOf="@+id/edtUserName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

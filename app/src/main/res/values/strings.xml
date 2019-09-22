@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">TechChallenge</string>
+
+
+    <!--
+    Login Activity String
+    -->
+    <string name="user_name">User Name</string>
+    <string name="user_password">User Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login">Login</string>
+
+    <!--
+    Error Message
+    -->
+    <string name="login_error_tittle">User Login Error</string>
+    <string name="login_error_message">Null impassable</string>
+    <string name="login_error">Password or username wrong</string>
+
+    <!--
+    Success Message
+    -->
+    <string name="success">Success</string>
+
+    <!--
+    Home Activity
+    -->
+    <string name="sign_out">Sign Out</string>
+    <string name="my_orders">My Orders</string>
+
 </resources>

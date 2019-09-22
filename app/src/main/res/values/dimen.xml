@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    * Responsible to manage SplashScreen from listener
+    * @author bilal
+    * @version 1.2.57
+    -->
+
+    <!--
+       Scroll View Margin and padding from loginActivity
+    -->
+    <dimen name="sc_login_top">16dp</dimen>
+    <dimen name="sc_login_bottom">16dp</dimen>
+    <dimen name="sc_login_left">16dp</dimen>
+    <dimen name="sc_login_right">16dp</dimen>
+
+
+    <!--
+       Edit Text Margin and padding from loginActivity
+    -->
+    <dimen name="edt_padding">10dp</dimen>
+    <dimen name="edt_margin_top">8dp</dimen>
+    <dimen name="edt_margin_bottom">8dp</dimen>
+    <dimen name="edt_margin_right">16dp</dimen>
+    <dimen name="edt_margin_left">16dp</dimen>
+
+
+    <!--
+      Switch Margin and padding from loginActivity
+     -->
+    <dimen name="sw_margin">10dp</dimen>
+    <dimen name="sw_padding">8dp</dimen>
+
+    <!--
+      Linear Layout Margin and padding from loginActivity
+     -->
+    <dimen name="ll_padding_login">10dp</dimen>
+
+    <!--
+     Linear Layout Margin and padding from loginActivity
+    -->
+    <dimen name="ll_padding_item_each">5dp</dimen>
+
+
+    <!--
+     Image View  Margin and padding from loginActivity
+    -->
+    <dimen name="iw_padding">8dp</dimen>
+    <dimen name="iw_margin">8dp</dimen>
+
+    <!--
+       Button Margin and padding from loginActivity
+    -->
+    <dimen name="bt_margin_start">8dp</dimen>
+    <dimen name="bt_margin_end">8dp</dimen>
+    <dimen name="bt_margin_top">8dp</dimen>
+    <dimen name="bt_margin_bottom">8dp</dimen>
+
+
+    <!--
+     Text View Dimens Each List Item
+    -->
+    <dimen name="tv_margin_bottom">10dp</dimen>
+    <dimen name="tv_margin_top">10dp</dimen>
+    <dimen name="tv_margin_right">10dp</dimen>
+    <dimen name="tv_margin_left">10dp</dimen>
+
+    <dimen name="tv_padding_bottom">10dp</dimen>
+    <dimen name="tv_padding_top">10dp</dimen>
+    <dimen name="tv_padding_right">10dp</dimen>
+    <dimen name="tv_padding_left">10dp</dimen>
+
+</resources>
