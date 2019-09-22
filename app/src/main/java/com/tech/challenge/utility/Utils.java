@@ -8,6 +8,8 @@ import android.view.inputmethod.InputMethodManager;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.tech.challenge.R;
+
 
 /**
  * Responsible to manage Utils
@@ -73,5 +75,21 @@ public class Utils {
         AppSettings.getInstance(context).set(Constants.IS_LOGIN, remember);
         return userName.equals(inputName) && userPass.equals(inputPass);
     }
+
+    public static void showExitAlert(Activity activity,Context context) {
+
+        if (activity == null) return;
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage(activity.getResources().getString(R.string.exitDialog))
+                .setCancelable(false)
+                .setPositiveButton(activity.getResources().getText(R.string.yes), (dialog, id) -> {
+                    activity.finish();
+                    AppSettings.getInstance(context).set(Constants.IS_LOGIN, false);
+                })
+                .setNegativeButton(activity.getResources().getText(R.string.no), (dialog, id) -> dialog.cancel());
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
 }

@@ -20,4 +20,9 @@ public class HomeFragmentPresenter implements HomeActivityContract.Presenter {
     public void setView(HomeActivityContract.View view) {
         this.mView = view;
     }
+
+    @Override
+    public void clickSignOut() {
+        mView.signOutAlert();
+    }
 }

@@ -14,12 +14,15 @@ public interface HomeActivityContract {
         void created();
 
         void setView(View view);
+
+        void clickSignOut();
     }
 
     interface View {
 
         void init();
 
+        void signOutAlert();
     }
 
 
