@@ -7,7 +7,14 @@
         <item name="colorPrimaryDark">@color/indigo</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlActivated">@color/white</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
         <item name="android:colorForeground">@color/foreground_material_light</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#2196F3</item>
+        <item name="android:textColorPrimary">#1E1F1F</item>
+        <item name="android:background">#FFFFFF</item>
     </style>
 
 </resources>
