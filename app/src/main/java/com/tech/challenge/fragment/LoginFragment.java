@@ -24,6 +24,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
+/**
+ * Responsible to manage LoginFragment
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class LoginFragment extends BaseFragment implements LoginFragmentContract.View {
     @BindView(R.id.edtUserName)
     AppCompatEditText edtUserName;

@@ -9,6 +9,13 @@ import com.tech.challenge.fragment.LoginFragment;
 import com.tech.challenge.utility.Constants;
 import com.tech.challenge.utility.Utils;
 
+
+/**
+ * Responsible to manage MainActivityPresenter
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class MainActivityPresenter implements MainActivityContract.Presenter {
 
     private MainActivityContract.View mView;
@@ -21,6 +28,10 @@ public class MainActivityPresenter implements MainActivityContract.Presenter {
 
     @Override
     public void created() {
+
+        /*
+        *user remember and user login controller
+         */
         boolean isLogin = Utils.isUserLogin(Constants.GET, (Context) mView);
         if (!isLogin)
             mView.switchScreen(new LoginFragment(), Constants.LOGIN_FRAGMENT);

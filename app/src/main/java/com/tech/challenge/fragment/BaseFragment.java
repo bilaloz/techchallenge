@@ -7,8 +7,14 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+/**
+ * Responsible to manage BaseFragment
+ *
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class BaseFragment extends Fragment {
-    private View mView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,8 +23,14 @@ public class BaseFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
+
+        /**
+         * This method aims to Garbage collector time finish Activity.
+         * @see onDestroyView
+         * @author bilal
+         * @since 1.0.0
+         */
         super.onDestroyView();
-        mView = null;
         System.gc();
     }
 

@@ -6,6 +6,13 @@ import android.util.Log;
 import com.orhanobut.hawk.Hawk;
 import com.orhanobut.hawk.NoEncryption;
 
+
+/**
+ * Responsible to manage ChallengeAppication
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class ChallengeApplication extends Application {
     public static Application mApplication;
     private String TAG = "ApplicationStart";

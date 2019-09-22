@@ -6,7 +6,18 @@ import android.util.Log;
 
 import com.orhanobut.hawk.Hawk;
 
+
+/**
+ * Responsible to manage AppSettings
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class AppSettings {
+
+    /**
+     * AppSettings Data Management
+     */
 
     private static final String SETTINGS_NAME = "default_settings";
     private static AppSettings sSharedPrefs;
