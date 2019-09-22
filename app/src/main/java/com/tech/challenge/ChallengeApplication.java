@@ -5,9 +5,6 @@ import android.util.Log;
 
 import com.orhanobut.hawk.Hawk;
 import com.orhanobut.hawk.NoEncryption;
-import com.orhanobut.logger.Logger;
-import com.tech.challenge.utility.AppSettings;
-import com.tech.challenge.utility.Constants;
 
 public class ChallengeApplication extends Application {
     public static Application mApplication;
@@ -28,7 +25,7 @@ public class ChallengeApplication extends Application {
         try {
             Hawk.init(this)
                     .setEncryption(new NoEncryption())
-                    .setLogInterceptor(message -> Logger.d("Hawk_Helper", "Message : " + message))
+                    .setLogInterceptor(message -> Log.d(TAG, "Message : " + message))
                     .build();
         } catch (Exception e) {
             Log.d(TAG, "onCreate: ");

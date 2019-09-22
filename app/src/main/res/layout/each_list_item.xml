@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:id="@+id/llLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/orderDayNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                tools:text="08" />
+
+            <TextView
+                android:id="@+id/orderDayMonth"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="Ekim" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="64"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/ll_padding_item_each"
+            android:paddingTop="@dimen/ll_padding_item_each">
+
+            <TextView
+                android:id="@+id/orderMarkets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Market 1" />
+
+            <TextView
+                android:id="@+id/orderDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_margin_top"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                tools:text="Şampuan 250 ml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:weightSum="100">
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/orderStatusColour"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/bt_margin_top"
+                    android:layout_weight="10"/>
+
+                <TextView
+                    android:id="@+id/orderStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="90"
+                    android:padding="@dimen/tv_padding_top"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    tools:text="Hazırlanıyor" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="15"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/spinnerDetail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/list_arrow_24dp" />
+
+
+            <TextView
+                android:id="@+id/orderPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black"
+                tools:text="25 TL" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal"
+        android:padding="@dimen/ll_padding_item_each"
+        android:visibility="gone"
+        android:weightSum="100">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="21" />
+
+        <TextView
+            android:id="@+id/spOrderDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="64"
+            android:textColor="@android:color/black"
+            tools:text="Sıvı Sabun 250 ml" />
+
+        <TextView
+            android:id="@+id/spOrderPay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:textColor="@android:color/black"
+            tools:text="25 TL" />
+
+    </LinearLayout>
+
+</LinearLayout>
