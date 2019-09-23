@@ -5,45 +5,85 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.tech.challenge.contract.HomeActivityContract;
 import com.tech.challenge.R;
 import com.tech.challenge.adapter.CustomAdapter;
 import com.tech.challenge.model.Response;
+import com.tech.challenge.presenter.HomeFragmentPresenter;
+import com.tech.challenge.utility.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 import cz.msebera.android.httpclient.Header;
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements HomeActivityContract.View {
 
-    ListView mListView;
+    @BindView(R.id.myOrders)
+    AppCompatButton myOrders;
+    @BindView(R.id.signOut)
+    AppCompatButton signOut;
     List<Response> responses = new ArrayList<>();
+    @BindView(R.id.toolbarTextView)
+    TextView toolbarTextView;
+    @BindView(R.id.mListView)
+    ListView mListView;
     private View mView;
     private Response[] mResponseObj;
     private CustomAdapter mCustomAdapter;
     private Gson mGson;
-    private String mUrl = "http://kariyertechchallenge.mockable.io/";
-    private AsyncHttpClient mClient;
     private String TAG = "HomeFragment";
+
+
+    /**
+     * Responsible to manage HomeFragment
+     *
+     * @author bilal
+     * @version 1.0.0
+     */
+
+    private Unbinder unbinder;
+    private HomeFragmentPresenter mLoginPresenter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.home_fragment, container, false);
 
-        mListView = mView.findViewById(R.id.mListView);
+        mLoginPresenter = new HomeFragmentPresenter();
+        mLoginPresenter.setView(this);
+        mLoginPresenter.created();
 
-        mClient = new AsyncHttpClient();
+
+        return mView;
+    }
+
+    @Override
+    public void init() {
+
+        unbinder = ButterKnife.bind(this, mView);
+
+        /**TODO
+         * HTTP MVP DESIGN EDIT , HTTP be must MVP ->  Helper Class
+         * View only view
+         */
+        AsyncHttpClient mClient = new AsyncHttpClient();
+        String mUrl = "http://kariyertechchallenge.mockable.io/";
         mClient.get(mView.getContext(), mUrl, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -68,12 +108,27 @@ public class HomeFragment extends BaseFragment {
 
             }
         });
+    }
 
-        mListView.setOnItemClickListener((adapterView, view, i, l) -> {
-            Log.d(TAG, "onItemClick: " + i);
-            Log.d(TAG, "onItemClick: " + view);
-        });
+    @Override
+    public void signOutAlert() {
+        Utils.showExitAlert(getActivity(), mView.getContext());
+    }
 
-        return mView;
+    @Override
+    public void onDestroyView() {
+        unbinder.unbind();
+        super.onDestroyView();
+    }
+
+    @OnClick({R.id.myOrders, R.id.signOut})
+    void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.myOrders:
+                break;
+            case R.id.signOut:
+                mLoginPresenter.clickSignOut();
+                break;
+        }
     }
 }

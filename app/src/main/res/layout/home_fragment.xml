@@ -51,14 +51,16 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
+                android:id="@+id/myOrders"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/bt_margin_end"
+                android:layout_marginEnd="@dimen/bt_margin_end"
                 android:layout_weight="1"
                 android:background="@drawable/home_button_bg_trans"
                 android:text="@string/my_orders" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"
+                android:id="@+id/signOut"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/home_button_bg"

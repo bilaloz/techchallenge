@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TechChallenge</string>
+
+
+    <!--
+    Login Activity String
+    -->
+    <string name="user_name">Kullanıcı Adı</string>
+    <string name="user_password">Kullanıcı Şifresi</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="login">Giriş</string>
+
+    <!--
+    Error Message
+    -->
+    <string name="login_error_tittle">Kullanıcı Giriş Hatası</string>
+    <string name="login_error_message">Boş Girilemez !!!</string>
+    <string name="login_error">Kullanıcı adı veya Şifre Yanlış</string>
+
+    <!--
+    Success Message
+    -->
+    <string name="success">Başarılı</string>
+
+    <!--
+    Home Activity
+    -->
+    <string name="sign_out">Çıkış Yap</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="exitDialog">Çıkış Yapmak İstiyor Musunuz ?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+
+</resources>

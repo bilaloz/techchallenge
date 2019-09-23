@@ -12,7 +12,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.SwitchCompat;
 
-import com.tech.challenge.LoginFragmentContract;
+import com.tech.challenge.contract.LoginFragmentContract;
 import com.tech.challenge.R;
 import com.tech.challenge.helper.ListenerHelper;
 import com.tech.challenge.presenter.LoginFragmentPresenter;
@@ -23,6 +23,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+
+/**
+ * Responsible to manage LoginFragment
+ * @author bilal
+ * @version 1.0.0
+ */
 
 public class LoginFragment extends BaseFragment implements LoginFragmentContract.View {
     @BindView(R.id.edtUserName)

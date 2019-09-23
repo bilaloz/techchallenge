@@ -1,5 +1,12 @@
 package com.tech.challenge.model;
 
+
+/**
+ * Responsible to manage ManinActivity
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class Response {
 
     /**

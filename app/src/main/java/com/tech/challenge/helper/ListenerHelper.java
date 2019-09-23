@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment;
 import com.tech.challenge.listeners.FragmentDelete;
 import com.tech.challenge.listeners.FragmentSwitch;
 
+/**
+ * Responsible to manage ListenerHelper
+ * @author bilal
+ * @version 1.0.0
+ */
+
 public class ListenerHelper {
     public static FragmentSwitch mFragmentSwitch;
     public static FragmentDelete mFragmentDelete;
